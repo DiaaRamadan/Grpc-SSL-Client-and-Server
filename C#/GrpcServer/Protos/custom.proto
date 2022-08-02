@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcServer";
+
+service Custom{
+	rpc getCustomInfo(CustomLookupModel) returns (CustomModel);
+}
+
+message CustomLookupModel{
+	int32 id = 1;
+}
+
+message CustomModel{
+	string name = 1;
+	string description = 2;
+	bool isActive = 3;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "Singer";
+
+service sign{
+  rpc sign(signRequest) returns (signReply);
+}
+
+message signRequest{
+  string data = 1;
+}
+
+message signReply{
+  string signedData = 1;
+}
